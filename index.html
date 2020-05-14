@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Pop out menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><a href="https://www.youtube.com/watch?v=Q51PzAx3D3E">&copy; [Code Artist] click here to watch the tutorial</a></header>
+
+    <div class="menu" onclick="pop()">
+        <i class="fa fa-share-alt"></i>
+    </div>
+    <div class="menu-item">
+        <div class="item1" id="item1">
+            <center>
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+
+            </center>
+        </div>
+    </div>
+    <div class="menu-item">
+        <div class="item2" id="item2">
+            <center>
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+
+            </center>
+        </div>
+    </div>
+    <div class="menu-item">
+        <div class="item3" id="item3">
+            <center>
+                <a href="#">
+                    <i class="fa fa-youtube"></i>
+                </a>
+
+            </center>
+        </div>
+    </div>
+    <div class="menu-item">
+        <div class="item4" id="item4">
+            <center>
+                <a href="#">
+                    <i class="fa fa-github"></i>
+                </a>
+
+            </center>
+        </div>
+    </div>
+    <div class="menu-item">
+        <div class="item5" id="item5">
+            <center>
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+            </center>
+        </div>
+    </div>
+    <script>
+        var i = 0
+
+        function pop() {
+            if (i == 0) {
+                document.getElementById("item1").style.transform = 'translateX(-150px)';
+                document.getElementById("item2").style.transform = 'translate(-100px,-100px)';
+                document.getElementById("item3").style.transform = 'translatey(-150px)';
+                document.getElementById("item4").style.transform = 'translate(100px,-100px)';
+                document.getElementById("item5").style.transform = 'translateX(150px)';
+                i = 1;
+            } else {
+                document.getElementById("item1").style.transform = 'translate(0)';
+                document.getElementById("item2").style.transform = 'translate(0)';
+                document.getElementById("item3").style.transform = 'translate(0)';
+                document.getElementById("item4").style.transform = 'translate(0)';
+                document.getElementById("item5").style.transform = 'translate(0)';
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
